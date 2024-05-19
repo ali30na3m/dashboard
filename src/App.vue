@@ -15,7 +15,7 @@ export default {
     <Header />
     <div class="relative">
       <SideBar />
-      <div class="absolute top-20 left-[240px] right-0">
+      <div class="absolute top-20 left-[240px] right-0 flex justify-center items-center ">
         <router-view></router-view>
       </div>
     </div>

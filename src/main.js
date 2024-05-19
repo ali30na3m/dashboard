@@ -1,6 +1,10 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import './assets/tailwind.css'
-import router from '../router.js'
+import './assets/tailwind.css';
+import router from '../router';
+import Antd from 'ant-design-vue';
 
-createApp(App).use(router).mount('#app');
+const app = createApp(App);
+app.use(router);
+app.use(Antd);
+app.mount('#app');

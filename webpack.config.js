@@ -1,15 +1,21 @@
-const { VueLoaderPlugin } = require('vue-loader');
-
 module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.vue$/,
-        use: 'vue-loader'
-      }
-    ]
+  lintOnSave: false,
+  chainWebpack: config => {
+    config.resolve.alias
+      .set('@', path.resolve(__dirname, 'src'))
+      .set('vue$', 'vue/dist/vue.runtime.esm.js');
   },
-  plugins: [
-    new VueLoaderPlugin()
-  ]
+  configureWebpack: {
+    module: {
+      rules: [
+        {
+          test: /\.ts$/,
+          loader: 'ts-loader',
+          options: {
+            appendTsSuffixTo: [/\.vue$/]
+          }
+        }
+      ]
+    }
+  }
 };
