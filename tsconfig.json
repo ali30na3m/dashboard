@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "types": ["vite/client"],
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "esnext"
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+}
