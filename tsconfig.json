@@ -13,6 +13,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
+    "types": ["@intlify/vue-i18n"],
     "lib": ["ESNext", "DOM"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
