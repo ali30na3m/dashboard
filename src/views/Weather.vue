@@ -10,6 +10,7 @@
         type="text"
         name="weatherValue"
         id="weatherValue"
+        @keyup.enter="fetchWeatherData"
         :placeholder="$t('weatherPlaceHolder')"
       />
       <a-button type="primary" @click="fetchWeatherData">{{
@@ -25,7 +26,6 @@
           {{
             weatherData.temperature && weatherData.temperatureUnit
               ? $t("weatherTemp")  + " : "
-
               : ""
           }}
         </p>

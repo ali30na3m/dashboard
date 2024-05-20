@@ -1,13 +1,12 @@
 <template>
-  <div class="h-max w-max mx-7 px-4 py-2 rounded-lg shadow-lg dark:bg-zinc-700"
-  >
+  <div class="h-max w-max mx-7 px-4 py-2 rounded-lg shadow-lg dark:bg-zinc-700">
     <h2 class="text-center text-3xl font-bold dark:text-gray-200">{{ currentTime }}</h2>
-    <p class="mt-9 text-center text-3xl font-bold dark:text-gray-200">hello dear ali30na</p>
+    <p class="mt-9 text-center text-3xl font-bold dark:text-gray-200">{{ greetingMessage }}</p>
   </div>
 </template>
 
 <script>
-import { defineComponent, ref, onMounted, onUnmounted } from "vue";
+import { defineComponent, ref, onMounted, onUnmounted, computed } from "vue";
 
 export default defineComponent({
   name: "DashboardP",
@@ -28,8 +27,32 @@ export default defineComponent({
       clearInterval(intervalId);
     });
 
+    const greetingMessage = computed(() => {
+      const hours = new Date().getHours();
+      if (hours < 12) {
+        if (localStorage.getItem('language') === 'fa'){
+          return "صبح بخیر";
+        }else {
+          return "Good morning"
+        }
+      } else if (hours < 18) {
+        if (localStorage.getItem('language') === 'fa'){
+          return "ظهر بخیر";
+        }else {
+          return "Good evening"
+        }
+      } else {
+        if (localStorage.getItem('language') === 'fa'){
+          return "شب بخیر";
+        }else {
+          return "Good night"
+        }
+      }
+    });
+
     return {
       currentTime,
+      greetingMessage,
     };
   },
 });

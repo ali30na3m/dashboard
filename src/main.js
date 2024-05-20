@@ -1,10 +1,11 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import './assets/tailwind.css';
 import router from '../router';
 import Antd from 'ant-design-vue';
 import { createI18n } from 'vue-i18n';
 import messages from './locales';
+
+import './assets/tailwind.css';
 
 const i18n = createI18n({
     locale: localStorage.getItem('language') || 'en',

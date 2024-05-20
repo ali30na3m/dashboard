@@ -10,8 +10,8 @@
         :placeholder="$t('placeHolderTodo')"
       />
       <button
-        class="flex items-center justify-center rounded-md bg-slate-200 text-2xl p-1"
-        @click="addTodo"
+        class="flex items-center justify-center rounded-md bg-slate-200 text-black text-2xl p-1"
+        @click.prevent="addTodo"
       >
         <PlusOutlined />
       </button>
@@ -24,7 +24,7 @@
           <p class="text-2xl dark:text-white">{{ todo }}</p>
         </div>
         <button
-          class="flex items-center justify-center text-xl p-1 rounded-lg bg-slate-100"
+          class="flex items-center justify-center text-xl p-1 rounded-lg text-black bg-slate-100"
           @click="removeTodo(index)"
         >
           <DeleteOutlined />

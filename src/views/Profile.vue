@@ -63,7 +63,6 @@ export default {
     const currentLanguage = ref("en");
     const selectedLanguage = ref("en");
 
-    // متد برای بارگذاری پروفایل
     const loadProfile = () => {
       const savedTheme = localStorage.getItem("theme");
       const savedLanguage = localStorage.getItem("language");
