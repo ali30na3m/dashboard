@@ -7,9 +7,12 @@ import { createI18n } from 'vue-i18n';
 import messages from './locales';
 
 const i18n = createI18n({
-    locale: 'en', 
+    locale: localStorage.getItem('language') || 'en',
     messages,
-  });
+});
+
+const theme = localStorage.getItem('theme') || 'light';
+document.documentElement.classList.add(theme);
 
 const app = createApp(App);
 app.use(router);

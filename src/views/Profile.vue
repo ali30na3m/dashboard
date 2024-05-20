@@ -6,12 +6,12 @@
     ]"
   >
     <h2 class="text-center text-3xl font-bold dark:text-gray-200">
-      {{ $t("profile") }}
+      {{ $t("headerprofile") }}
     </h2>
     <div class="flex items-center justify-start gap-4 my-7">
       <input
         v-model="username"
-        class="w-[300px] text-xl py-2 px-4 rounded-xl border-gray-500 border-2 bg-white dark:bg-zinc-500 dark:text-gray-200"
+        class="w-[300px] text-xl py-2 px-4 rounded-xl border-gray-500 border-2 bg-white dark:bg-zinc-500 dark:text-gray-200 dark:placeholder-gray-50"
         type="text"
         name="TodoValue"
         id="TodoValue"
@@ -25,8 +25,8 @@
         id="theme"
         class="py-2 px-4 rounded-xl text-gray-800 dark:bg-zinc-600 dark:text-gray-200"
       >
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
+        <option value="light">{{$t('lightMode')}}</option>
+        <option value="dark">{{$t('darkMode')}}</option>
       </select>
       <select
         v-model="selectedLanguage"
@@ -42,7 +42,7 @@
       class="flex justify-center items-center mx-auto dark:text-gray-200"
       @click="saveProfileHandler"
       type="primary"
-      >{{ $t("save") }}</a-button
+      >{{ $t("saveBtnProfile") }}</a-button
     >
   </div>
 </template>
@@ -81,28 +81,22 @@ export default {
       }
     };
 
-    // متد برای ذخیره تغییرات پروفایل
     const saveProfileHandler = () => {
-      // اعمال تغییرات تم و زبان تنها پس از کلیک روی دکمه "ذخیره"
       currentTheme.value = selectedTheme.value;
       currentLanguage.value = selectedLanguage.value;
 
-      // ذخیره در localStorage
       localStorage.setItem("theme", currentTheme.value);
       localStorage.setItem("language", currentLanguage.value);
 
-      // اعمال تنظیمات به document
       document.documentElement.classList.remove("light", "dark");
       document.documentElement.classList.add(currentTheme.value);
       locale.value = currentLanguage.value;
     };
 
-    // بارگذاری اولیه
     onMounted(() => {
       loadProfile();
     });
 
-    // برگرداندن متغیرها و متدها برای استفاده در قالب
     return {
       username,
       currentTheme,
@@ -117,9 +111,6 @@ export default {
 </script>
 
 <style>
-body {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
 
 :root {
   --bg-color-dark: #18181b; /* Zinc 700 */
