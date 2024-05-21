@@ -10,6 +10,7 @@
         <router-link to="/todos">{{ $t("headerTodo") }}</router-link>
         <router-link to="/weather">{{ $t("weatherHeader") }}</router-link>
         <router-link to="/profile">{{ $t("headerprofile") }}</router-link>
+        <!-- <router-link to="/">{{ $t("headerprofile") }}</router-link> -->
       </div>
     </div>
   </div>

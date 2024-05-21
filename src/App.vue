@@ -58,6 +58,3 @@ export default {
 };
 </script>
 
-<style scoped>
-/* Additional scoped styles can be added here if needed */
-</style>

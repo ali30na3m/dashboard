@@ -16,6 +16,7 @@ export default {
       dashboardSideBar : 'dashboard',
       welcome : 'welcome to your dashboard',
       titleHeader: 'App Bar',
+      login : 'Login',
     },
     fa: {
       headerprofile: 'پروفایل',
@@ -34,5 +35,6 @@ export default {
       dashboardSideBar : 'داشبورد',
       welcome : 'به داشبورد خود خوش آمدید',
       titleHeader: 'نوار برنامه',
+      login : 'ورود'
     },
   };

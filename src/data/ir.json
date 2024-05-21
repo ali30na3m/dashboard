@@ -22,7 +22,7 @@
     "population_proper": "3001184"
   }, 
   {
-    "city": "Eşfahān", 
+    "city": "Esfahan", 
     "lat": "32.6447", 
     "lng": "51.6675", 
     "country": "Iran", 
@@ -44,7 +44,7 @@
     "population_proper": "1592492"
   }, 
   {
-    "city": "Tabrīz", 
+    "city": "Tabriz", 
     "lat": "38.0833", 
     "lng": "46.2833", 
     "country": "Iran", 
@@ -55,7 +55,7 @@
     "population_proper": "1558693"
   }, 
   {
-    "city": "Shīrāz", 
+    "city": "Shiraz", 
     "lat": "29.6100", 
     "lng": "52.5425", 
     "country": "Iran", 
@@ -77,7 +77,7 @@
     "population_proper": "1201158"
   }, 
   {
-    "city": "Ahvāz", 
+    "city": "Ahvaz", 
     "lat": "31.3203", 
     "lng": "48.6692", 
     "country": "Iran", 
@@ -88,7 +88,7 @@
     "population_proper": "1184788"
   }, 
   {
-    "city": "Kermānshāh", 
+    "city": "Kermanshah", 
     "lat": "34.3167", 
     "lng": "47.0686", 
     "country": "Iran", 
@@ -99,7 +99,7 @@
     "population_proper": "851405"
   }, 
   {
-    "city": "Orūmīyeh", 
+    "city": "Orumiyeh", 
     "lat": "37.5486", 
     "lng": "45.0675", 
     "country": "Iran", 
@@ -121,7 +121,7 @@
     "population_proper": "639951"
   }, 
   {
-    "city": "Kermān", 
+    "city": "Kerman", 
     "lat": "30.2833", 
     "lng": "57.0667", 
     "country": "Iran", 
@@ -132,7 +132,7 @@
     "population_proper": "573449"
   }, 
   {
-    "city": "Zāhedān", 
+    "city": "Zahedan", 
     "lat": "29.4833", 
     "lng": "60.8667", 
     "country": "Iran", 
@@ -143,7 +143,7 @@
     "population_proper": "560725"
   }, 
   {
-    "city": "Eslāmshahr", 
+    "city": "Eslamshahr", 
     "lat": "35.5333", 
     "lng": "51.2000", 
     "country": "Iran", 
@@ -154,7 +154,7 @@
     "population_proper": "548620"
   }, 
   {
-    "city": "Hamadān", 
+    "city": "Hamadan", 
     "lat": "34.8065", 
     "lng": "48.5162", 
     "country": "Iran", 
@@ -176,7 +176,7 @@
     "population_proper": "486152"
   }, 
   {
-    "city": "Arāk", 
+    "city": "Arak", 
     "lat": "34.0800", 
     "lng": "49.7000", 
     "country": "Iran", 
@@ -187,7 +187,7 @@
     "population_proper": "484212"
   }, 
   {
-    "city": "Ardabīl", 
+    "city": "Ardabil", 
     "lat": "38.2500", 
     "lng": "48.3000", 
     "country": "Iran", 
@@ -209,7 +209,7 @@
     "population_proper": "435751"
   }, 
   {
-    "city": "Zanjān", 
+    "city": "Zanjan", 
     "lat": "36.6667", 
     "lng": "48.4833", 
     "country": "Iran", 

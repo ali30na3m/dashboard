@@ -25,8 +25,8 @@
         id="theme"
         class="py-2 px-4 rounded-xl text-gray-800 dark:bg-zinc-600 dark:text-gray-200"
       >
-        <option value="light">{{$t('lightMode')}}</option>
-        <option value="dark">{{$t('darkMode')}}</option>
+        <option value="light">{{ $t("lightMode") }}</option>
+        <option value="dark">{{ $t("darkMode") }}</option>
       </select>
       <select
         v-model="selectedLanguage"
@@ -48,6 +48,7 @@
 </template>
 
 <script>
+import Swal from "sweetalert2";
 import { ref, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 
@@ -58,6 +59,7 @@ export default {
 
     // متغیرهای وضعیت
     const username = ref("");
+    const password = ref("");
     const currentTheme = ref("light");
     const selectedTheme = ref("light");
     const currentLanguage = ref("en");
@@ -66,6 +68,7 @@ export default {
     const loadProfile = () => {
       const savedTheme = localStorage.getItem("theme");
       const savedLanguage = localStorage.getItem("language");
+      const savedUserInfo = JSON.parse(localStorage.getItem("userInfo"));
 
       if (savedTheme) {
         currentTheme.value = savedTheme;
@@ -78,6 +81,10 @@ export default {
         selectedLanguage.value = savedLanguage;
         locale.value = savedLanguage;
       }
+      if (savedUserInfo) {
+        password.value = savedUserInfo[1];
+        username.value = savedUserInfo[0]
+      }
     };
 
     const saveProfileHandler = () => {
@@ -86,6 +93,15 @@ export default {
 
       localStorage.setItem("theme", currentTheme.value);
       localStorage.setItem("language", currentLanguage.value);
+      localStorage.setItem(
+        "userInfo",
+        JSON.stringify([username.value, password.value])
+      );
+      username.value = "";
+      Swal.fire({
+        icon: "success",
+        title: localStorage.getItem('language') === 'en' ? "success" : "تغییر نام کاربری موفقیت آمیز بود.",
+      });
 
       document.documentElement.classList.remove("light", "dark");
       document.documentElement.classList.add(currentTheme.value);
@@ -98,6 +114,7 @@ export default {
 
     return {
       username,
+      password,
       currentTheme,
       selectedTheme,
       currentLanguage,
@@ -110,7 +127,6 @@ export default {
 </script>
 
 <style>
-
 :root {
   --bg-color-dark: #18181b; /* Zinc 700 */
 }

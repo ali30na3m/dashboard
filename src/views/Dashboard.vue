@@ -1,7 +1,11 @@
 <template>
   <div class="h-max w-max mx-7 px-4 py-2 rounded-lg shadow-lg dark:bg-zinc-700">
-    <h2 class="text-center text-3xl font-bold dark:text-gray-200">{{ currentTime }}</h2>
-    <p class="mt-9 text-center text-3xl font-bold dark:text-gray-200">{{ greetingMessage }}</p>
+    <h2 class="text-center text-3xl font-bold dark:text-gray-200">
+      {{ currentTime }}
+    </h2>
+    <p class="mt-9 text-center text-3xl font-bold dark:text-gray-200">
+      {{ greetingMessage }}
+    </p>
   </div>
 </template>
 
@@ -12,6 +16,8 @@ export default defineComponent({
   name: "DashboardP",
   setup() {
     const currentTime = ref(new Date().toLocaleTimeString());
+    const username = JSON.parse(localStorage.getItem("userInfo"));
+
 
     const updateTime = () => {
       currentTime.value = new Date().toLocaleTimeString();
@@ -30,22 +36,22 @@ export default defineComponent({
     const greetingMessage = computed(() => {
       const hours = new Date().getHours();
       if (hours < 12) {
-        if (localStorage.getItem('language') === 'fa'){
-          return "صبح بخیر";
-        }else {
-          return "Good morning"
+        if (localStorage.getItem("language") === "fa") {
+          return username[0] + "صبح بخیر ";
+        } else {
+          return "Good morning " + username[0];
         }
       } else if (hours < 18) {
-        if (localStorage.getItem('language') === 'fa'){
-          return "ظهر بخیر";
-        }else {
-          return "Good evening"
+        if (localStorage.getItem("language") === "fa") {
+          return  username[0] + "ظهر بخیر ";
+        } else {
+          return  "Good evening " + username[0] ;
         }
       } else {
-        if (localStorage.getItem('language') === 'fa'){
-          return "شب بخیر";
-        }else {
-          return "Good night"
+        if (localStorage.getItem("language") === "fa") {
+          return  username[0] + "شب بخیر ";
+        } else {
+          return  "Good night " + username[0] ;
         }
       }
     });
