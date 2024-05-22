@@ -18,6 +18,7 @@ declare module './locales.ts' {
         welcome: string,
         titleHeader: string,
         login: string,
+        logout:string
       },
       fa: {
         headerprofile: string,
@@ -37,6 +38,7 @@ declare module './locales.ts' {
         welcome: string,
         titleHeader: string,
         login: string,
+        logout:string
       }
     };
     export default value;

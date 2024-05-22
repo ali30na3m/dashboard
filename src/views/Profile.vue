@@ -12,6 +12,7 @@
         type="text"
         name="TodoValue"
         id="TodoValue"
+        @keyup.enter="saveProfileHandler"
         :placeholder="$t('usernamePlaceHolder')"
       />
       <select
@@ -88,8 +89,7 @@ const saveProfileHandler = () => {
   localStorage.setItem('userInfo', JSON.stringify([username.value, password.value]))
   Swal.fire({
     icon: 'success',
-    title:
-      locale.value === 'en' ? 'Profile updated successfully' : 'تغییر نام کاربری موفقیت آمیز بود.'
+    title: locale.value === 'en' ? 'Profile updated successfully' : 'تغییر نام کاربری موفقیت آمیز بود.',
   })
 
   document.documentElement.classList.remove('light', 'dark')
